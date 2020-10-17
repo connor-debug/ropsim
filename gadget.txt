@@ -1,0 +1,9 @@
+
+pop eax
+return;
+
+push eax
+pop eax
+return;
+
+return;
