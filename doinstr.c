@@ -1,16 +1,18 @@
-#define MAXBUFLEN
+#define MAXBUFLEN 1000000
+#define STACKLEN 64
 #include <stdio.h>
 extern char *g[256];
 extern char source[MAXBUFLEN + 1];
 extern int total;
 char oper [16];
+extern struct Stack* stack;
 
 void memOper(char * arg){ // now compare to all of the words pop push return etc....
     if(strcmp(oper,"pop")){
-    // pop arg
+        pop(stack);
     }
   if(strcmp(oper,"push")){
-    // push arg
+        push(stack,atoi(arg));
     }
 }
 
